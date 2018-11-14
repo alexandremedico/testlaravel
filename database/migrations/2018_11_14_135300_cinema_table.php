@@ -13,7 +13,11 @@ class CinemaTable extends Migration
      */
     public function up()
     {
-        //
+      Cinema::create('seance', function (Blueprint $table) {
+          $table->increments('id');
+          $table->string('name');
+          $table->string('hour');
+          $table->timestamps();
     }
 
     /**
@@ -23,6 +27,6 @@ class CinemaTable extends Migration
      */
     public function down()
     {
-        //
+        Cinema::drop('seance');
     }
 }

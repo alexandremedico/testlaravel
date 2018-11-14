@@ -16,7 +16,7 @@ class CinemaTable extends Migration
       Cinema::create('seance', function (Blueprint $table) {
           $table->increments('id');
           $table->string('name');
-          $table->string('hour');
+          $table->time('hour');
           $table->timestamps();
     }
 
